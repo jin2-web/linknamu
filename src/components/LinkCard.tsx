@@ -14,14 +14,24 @@ export default function LinkCard({ link }: LinkCardProps) {
       target={isWebLink ? "_blank" : undefined}
       rel={isWebLink ? "noopener noreferrer" : undefined}
       data-link-id={link.id}
-      className="block w-full rounded-xl border border-black/15 bg-white px-5 py-4 text-center font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 active:translate-y-0 dark:border-white/15 dark:bg-zinc-900 dark:focus-visible:outline-zinc-100"
+      className="group grid w-full grid-cols-[1.5rem_1fr_1.5rem] items-center gap-2 rounded-2xl border border-black/[.06] bg-white px-4 py-3.5 text-sm font-medium transition-colors duration-200 hover:border-black/15 hover:bg-zinc-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-white/[.08] dark:bg-zinc-900 dark:hover:border-white/20 dark:hover:bg-zinc-800 dark:focus-visible:outline-zinc-100"
     >
-      {link.emoji && (
-        <span aria-hidden="true" className="mr-2">
-          {link.emoji}
-        </span>
-      )}
-      {link.title}
+      <span aria-hidden="true" className="text-base leading-none">
+        {link.emoji}
+      </span>
+      <span className="text-center">{link.title}</span>
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="size-4 justify-self-end text-zinc-400 opacity-0 transition duration-200 group-hover:translate-x-0.5 group-hover:opacity-100 group-focus-visible:opacity-100"
+      >
+        <path d="M3 8h10M9 4l4 4-4 4" />
+      </svg>
     </a>
   );
 }

@@ -7,7 +7,7 @@ type LinkListProps = {
 
 export default function LinkList({ links }: LinkListProps) {
   return (
-    <ul className="flex w-full flex-col gap-4">
+    <ul className="flex w-full flex-col gap-3">
       {links.map(function renderLink(link) {
         return (
           <li key={link.id}>
