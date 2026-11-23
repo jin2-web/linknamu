@@ -3,6 +3,8 @@ export type LinkItem = {
   id: string;
   title: string;
   url: string;
+  /** 제목 앞에 표시할 이모지 (선택) */
+  emoji?: string;
 };
 
 export type Profile = {
@@ -16,10 +18,10 @@ export type Profile = {
 export const profile: Profile = {
   name: "정현희",
   bio: "세계 최강 바이크코더",
-  avatarUrl: "/avatar.svg",
+  avatarUrl: "/profile.jpg",
   links: [
-    { id: "github", title: "GitHub", url: "https://github.com" },
-    { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com" },
-    { id: "blog", title: "Blog", url: "https://velog.io" },
+    { id: "github", title: "깃허브", url: "https://github.com/jin2-web", emoji: "🐙" },
+    { id: "blog", title: "블로그", url: "https://cafe.naver.com/thisiscoding", emoji: "🟢" },
+    { id: "email", title: "이메일", url: "mailto:jhunhee0075@gmail.com", emoji: "📧" },
   ],
 };
