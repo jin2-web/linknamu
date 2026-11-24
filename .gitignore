@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 개인 메모 및 접속 정보 (커밋 금지)
+atlas-credentials.env
+mogoDB정리.html
